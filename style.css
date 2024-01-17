@@ -1,0 +1,125 @@
+@font-face {
+    font-family: 'JosefinSans';
+    src: url('./fonts/Josefin_Sans/JosefinSans-VariableFont_wght.ttf');
+}
+
+:root {
+    --light-brown: #f2ce9e;
+    --dark-brown: #542c22;
+    --dark-brown-hover: #421f17;
+}
+
+* {
+    font-family: 'JosefinSans', Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url('./img/background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#content {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+/* MAIN */
+.main {
+    display: flex;
+    flex-direction: column;
+    flex: 17;
+    align-items: center;
+    justify-content: space-around;
+}
+
+/* HOMEPAGE */
+.homepage-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: var(--dark-brown-hover) solid 12px;
+    background-color: var(--dark-brown);
+    color: var(--light-brown);
+    font-size: 20px;
+    height: 20%;
+    min-height: 200px;
+    width: 70%;
+}
+
+.about {
+    height: 30%;
+    min-height: 420px;
+}
+
+.hours {
+    text-align: center;
+}
+
+.homepage-image {
+    max-height: 100%;
+    max-width: 100%;
+}
+
+.image {
+    height: 90%;
+    width: 96%;
+}
+
+/* HEADER */
+.header {
+    display: flex;
+    flex: 2;
+    flex-direction: column;
+    gap: 12px;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.5);
+    background-color: var(--dark-brown);
+    color: var(--light-brown);
+    font-size: 36px;
+}
+
+.restaurant-name {
+    margin-top: 24px;
+}
+
+.nav {
+    display: flex;
+}
+
+.nav-button {
+    background-color: transparent;
+    border: none;
+    color: var(--light-brown);
+    font-size: 28px;
+    font-weight: 700;
+    height: 84px;
+    width: 200px;
+}
+
+.nav-button:hover {
+    background-color: var(--dark-brown-hover);
+    font-size: 32px;
+}
+
+/* FOOTER */
+.footer {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 -6px 18px rgba(0, 0, 0, 0.5);
+    background-color: var(--dark-brown);
+    color: var(--light-brown);
+    font-size: 18px;
+}
+
+.github-icon {
+    color: var(--light-brown);
+    font-size: 24px;
+}
