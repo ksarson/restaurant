@@ -6,14 +6,38 @@ function createHeader() {
     const header = document.createElement('header');
     header.classList.add('header');
 
+    const headerImage = document.createElement('img');
+    headerImage.classList.add('header-image');
+    headerImage.setAttribute('src', './img/cubone.png');
+    headerImage.setAttribute('alt', 'cubone');
+
+    const headerTitle = document.createElement('div');
+    headerTitle.classList.add('header-text');
+    headerTitle.appendChild(headerImage);
+
     const restaurantName = document.createElement('h1');
     restaurantName.classList.add('restaurant-name');
     restaurantName.textContent = 'Cubone Café';
+    headerTitle.appendChild(restaurantName);
 
-    header.appendChild(restaurantName);
+    header.appendChild(headerTitle);
     header.appendChild(createNav());
 
     return header;
+}
+
+function createImage() {
+    const homepageImageDiv = document.createElement('div');
+    homepageImageDiv.classList.add('homepage-content', 'homepage-image-div');
+
+    const homepageImage = document.createElement('img');
+    homepageImage.classList.add('homepage-image');
+    homepageImage.setAttribute('src', './img/coffeeShop.jpg');
+    homepageImage.setAttribute('alt', 'coffeeShop');
+
+    homepageImageDiv.appendChild(homepageImage);
+
+    return homepageImageDiv;
 }
 
 function createNav() {
@@ -76,8 +100,31 @@ function initializeWebsite() {
     content.appendChild(createHeader());
     content.appendChild(createMain());
     content.appendChild(createFooter());
+    createHomepage();
 
-    createContact();
+    const homepageButton = document.querySelector('.homepage-button');
+    const menuButton = document.querySelector('.menu-button');
+    const contactButton = document.querySelector('.contact-button');
+
+    homepageButton.addEventListener('click', () => {
+        clearContent();
+        createHomepage();
+    });
+    menuButton.addEventListener('click', () => {
+        clearContent();
+        createMenu();
+    });
+    contactButton.addEventListener('click', () => {
+        clearContent();
+        createContact();
+    });
+}
+
+function clearContent() {
+    const main = document.getElementById('main');
+    while (main.firstChild) {
+        main.removeChild(main.firstChild);
+    }
 }
 
 export default initializeWebsite;
