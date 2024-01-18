@@ -1,4 +1,5 @@
 import createHomepage from './homepage';
+import createMenu from './menu';
 
 function createHeader() {
     const header = document.createElement('header');
@@ -75,7 +76,7 @@ function initializeWebsite() {
     content.appendChild(createMain());
     content.appendChild(createFooter());
 
-    createHomepage();
+    createMenu();
 }
 
 export default initializeWebsite;

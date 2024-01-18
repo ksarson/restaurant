@@ -15,13 +15,6 @@
     padding: 0;
 }
 
-body {
-    background-image: url('./img/background.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
 #content {
     display: flex;
     flex-direction: column;
@@ -30,6 +23,10 @@ body {
 
 /* MAIN */
 .main {
+    background-image: url('./img/background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     display: flex;
     flex-direction: column;
     flex: 17;
@@ -54,20 +51,46 @@ body {
 .about {
     height: 30%;
     min-height: 420px;
+    min-width: 700px;
+    max-width: 1000px;
 }
 
 .hours {
     text-align: center;
+    width: 700px;
+}
+
+.homepage-image-div {
+    min-height: 30%;
+    max-height: 50%;
+    width: 700px;
 }
 
 .homepage-image {
-    max-height: 100%;
-    max-width: 100%;
-}
-
-.image {
     height: 90%;
     width: 96%;
+}
+
+/* MENU */
+.menu-item-div {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 12px;
+    border: var(--dark-brown-hover) solid 6px;
+    background-color: var(--dark-brown);
+    color: var(--light-brown);
+    font-size: 20px;
+    height: 12%;
+    min-height: 110px;
+    width: 50%;
+    min-width: 600px;
+}
+
+.menu-image {
+    padding-right: 6px;
+    height: 100px;
+    width: 100px;
 }
 
 /* HEADER */
@@ -113,10 +136,12 @@ body {
     flex: 1;
     align-items: center;
     justify-content: center;
+    gap: 4px;
     box-shadow: 0 -6px 18px rgba(0, 0, 0, 0.5);
     background-color: var(--dark-brown);
     color: var(--light-brown);
     font-size: 18px;
+    min-height: 48px;
 }
 
 .github-icon {

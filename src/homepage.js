@@ -49,18 +49,17 @@ function createDailyHoursText(dayOfTheWeek, startTime, endTime) {
 }
 
 function createImage() {
-    const homepageImage = document.createElement('image');
-    homepageImage.classList.add('homepage-content', 'homepage-image');
+    const homepageImageDiv = document.createElement('div');
+    homepageImageDiv.classList.add('homepage-content', 'homepage-image-div');
 
-    const image = document.createElement('img');
-    image.classList.add('image');
-    image.setAttribute('src', './img/coffeeHomepage.jpg');
-    image.setAttribute('alt', 'coffeeHomepage');
-    //image.innerHTML = `<img src='./img/coffeeHomepage.jpg' alt='coffeeHomepage'/>`;
+    const homepageImage = document.createElement('img');
+    homepageImage.classList.add('homepage-image');
+    homepageImage.setAttribute('src', './img/coffeeHomepage.jpg');
+    homepageImage.setAttribute('alt', 'coffeeHomepage');
 
-    homepageImage.appendChild(image);
+    homepageImageDiv.appendChild(homepageImage);
 
-    return homepageImage;
+    return homepageImageDiv;
 }
 
 function createHomepage() {
