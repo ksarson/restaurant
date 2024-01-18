@@ -1,31 +1,29 @@
+//#region - About Paragraphs
 const aboutParagraph1 = `Welcome to Cubone Café, a charming retreat nestled in the heart of the city.
     At Cubone Café, we celebrate the art of coffee and the joy of shared moments.
     Our mission is to provide a haven where people can escape, connect, and relish the simple pleasures of life.`;
 
-const aboutParagraph2 = `Explore our thoughtfully crafted menu featuring premium coffee blends sourced from diverse corners of the globe.
-Each cup at Cubone Café is a journey of flavors, from the bold intensity of our espresso to the nuanced profiles of our signature blends.
-We are committed to sustainability, ensuring our coffee beans are ethically sourced, and we actively minimize our environmental footprint.`;
-
-const aboutParagraph3 = `Join us at Cubone Café, where every cup is an invitation to savor the extraordinary.
+const aboutParagraph2 = `Join us at Cubone Café, where every cup is an invitation to savor the extraordinary.
     Immerse yourself in the perfect blend of flavors, the warm embrace of community, and the genuine connections forged over a shared love for exceptional coffee.
     Experience Cubone Café – where the love for coffee meets the heart of the community.`;
+//#endregion
 
 function createAbout() {
-    const about = document.createElement('about');
-    about.classList.add('homepage-content', 'about');
+    const aboutDiv = document.createElement('div');
+    aboutDiv.classList.add('homepage-content', 'about-div');
 
     const aboutText = document.createElement('div');
     aboutText.classList.add('about-text');
-    aboutText.innerHTML = `<h1>About Us</h1><br><p>${aboutParagraph1}</p><br><p>${aboutParagraph2}</p><br><p>${aboutParagraph3}</p>`;
+    aboutText.innerHTML = `<h1>About Us</h1><br><p>${aboutParagraph1}</p><br><p>${aboutParagraph2}</p>`;
 
-    about.appendChild(aboutText);
+    aboutDiv.appendChild(aboutText);
 
-    return about;
+    return aboutDiv;
 }
 
 function createHours() {
-    const hours = document.createElement('hours');
-    hours.classList.add('homepage-content', 'hours');
+    const hoursDiv = document.createElement('div');
+    hoursDiv.classList.add('homepage-content', 'hours-div');
 
     const hoursText = document.createElement('div');
     hoursText.classList.add('hours-text');
@@ -38,9 +36,9 @@ function createHours() {
     ${createDailyHoursText('Friday', 7, 10)}<br>
     ${createDailyHoursText('Saturday', 8, 11)}<br>`;
 
-    hours.appendChild(hoursText);
+    hoursDiv.appendChild(hoursText);
 
-    return hours;
+    return hoursDiv;
 }
 
 function createDailyHoursText(dayOfTheWeek, startTime, endTime) {
@@ -54,8 +52,8 @@ function createImage() {
 
     const homepageImage = document.createElement('img');
     homepageImage.classList.add('homepage-image');
-    homepageImage.setAttribute('src', './img/coffeeHomepage.jpg');
-    homepageImage.setAttribute('alt', 'coffeeHomepage');
+    homepageImage.setAttribute('src', './img/coffeeShop.jpg');
+    homepageImage.setAttribute('alt', 'coffeeShop');
 
     homepageImageDiv.appendChild(homepageImage);
 
